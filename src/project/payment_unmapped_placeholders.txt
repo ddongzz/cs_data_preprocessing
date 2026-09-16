@@ -1,0 +1,28 @@
+{{Account Name}} 
+{{Account Number}} 
+{{Billing Category}}
+{{Billing History}}
+{{Billing}}
+{{Company Name}}
+{{Company Representative Name}}
+{{Customer Service Email}}
+{{Customer Support Email}}
+{{Customer Support Hours}}
+{{Customer Support Phone Number}}
+{{Date Range}}
+{{Date of the Bill}}
+{{Date of the Invoice}}
+{{Date}}
+{{Invoice Name}} > 
+{{Invoice Number}} > transaction_id(거래번호)
+{{Month}}
+{{Payment Issue Email}}
+{{Payment Issue Phone Number}}
+{{Salutation}}
+{{Settings}}
+{{Timeframe}}
+{{Website URL}}
+{{Year}}
+{{additional details}}
+{{month}}
+{{year}}
