@@ -1,0 +1,23 @@
+{{Account Name}}
+{{Account Number}}
+{{Company Representative Name}}
+{{Date Range}}
+{{Date of the Bill}}
+{{Date of the Invoice}} 
+{{Invoice Name}}
+{{Payment Issue Email}}
+{{Payment Issue Phone Number}}
+
+{{Billing Category}} {payment_method}
+{{Billing History}} 결제 내역
+{{Invoice Number}} {transaction_id}
+{{Salutation}} ''
+{{Billing}} 청구
+{{Date}} 날짜
+{{Settings}} 설정
+{{Timeframe}} 조회 기간
+{{additional details}} 추가 세부 사항
+{{month}} 월
+{{Month}} 월
+{{year}} 년
+{{Year}} 년

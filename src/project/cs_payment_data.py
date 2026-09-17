@@ -26,7 +26,24 @@ placeholder_mapping = {
     r'\{\{Client First Name\}\}': '{name}',
     r'\{\{Client Last Name\}\}': '{name}',
     r'\{\{Full Name\}\}': '{name}',
-    r'\{\{Person Name\}\}': '{name}'
+    r'\{\{Person Name\}\}': '{name}',
+    r'\{\{Invoice Number\}\}': '{transaction_id}',
+    r'\{\{Billing Category\}\}': '{payment_method}',
+    r'\{\{Customer Support Phone Number\}\}': '02-1577-1577',
+    r'\{\{Website URL\}\}': '배포주소',
+    r'\{\{Customer Support Email\}\}': 'hanwha@naver.com',
+    r'\{\{Customer Service Email\}\}': 'hanwha@naver.com',
+    r'\{\{Company Name\}\}': '한화',
+    r'\{\{Customer Support Hours\}\}': '09:00 ~ 18:00',
+    r'\{\{[Yy]ear\}\}': '년',
+    r'\{\{[Mm]onth\}\}': '월',
+    r'\{\{additional details\}\}': '추가 세부 사항',
+    r'\{\{Date\}\}': '날짜',
+    r'\{\{Settings\}\}': '설정',
+    r'\{\{Billing\}\}': '청구',
+    r'\{\{Timeframe\}\}': '요청하신 기간',
+    r'\{\{Salutation\}\}\s*': '',
+    r'\{\{Billing History\}\}': '결제 내역'
 }
 
 for pattern_str, repl in placeholder_mapping.items():
@@ -41,7 +58,7 @@ def extract_placeholders(text):
 payment_df['문의 내용'].apply(lambda x: unmapped_placeholders.update(extract_placeholders(x)))
 payment_df['응답'].apply(lambda x: unmapped_placeholders.update(extract_placeholders(x)))
 
-with open('payment_unmapped_placeholders.txt', 'w', encoding='utf-8') as f:
+with open('payment_unmapped_placeholders_v3.txt', 'w', encoding='utf-8') as f:
     for p in sorted(list(unmapped_placeholders)):
         f.write(f"{p}\n")
 
@@ -60,6 +77,7 @@ else:
     print("✅ 통과: 현재 100건 이하인 복합/오류 의도(Intent)가 없습니다.")
 
 # 6. 결과 저장
-payment_df.to_csv('payment_data_ko_preprocessed.csv', index=False, encoding='utf-8-sig')
+payment_df.to_csv('payment_data_ko_preprocessed_v3.csv', index=False, encoding='utf-8-sig')
+payment_df.to_excel('payment_data_ko_preprocessed_v3.xlsx', index=False)
 print(f"전처리 완료: {len(payment_df)}건의 데이터가 payment_data_ko_preprocessed.csv로 저장되었습니다.")
 print("매핑되지 않은 Placeholder 목록은 payment_unmapped_placeholders.txt를 확인하십시오.")

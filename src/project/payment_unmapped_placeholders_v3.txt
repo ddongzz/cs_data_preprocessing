@@ -1,0 +1,9 @@
+{{Account Name}}
+{{Account Number}}
+{{Company Representative Name}}
+{{Date Range}}
+{{Date of the Bill}}
+{{Date of the Invoice}}
+{{Invoice Name}}
+{{Payment Issue Email}}
+{{Payment Issue Phone Number}}
